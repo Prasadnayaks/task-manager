@@ -1,0 +1,30 @@
+services:
+  backend:
+    build:
+      context: ./
+    ports: 
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - DATABASE_URL=postgresql://postgres:test123@db:5432/mydb
+    depends_on:
+      - db
+    volumes:
+      - ./:/app
+      - /app/node_modules
+
+  db:
+    image: postgres:15
+    container_name: postgres_container
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: test123
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

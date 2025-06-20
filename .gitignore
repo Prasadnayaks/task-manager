@@ -1,0 +1,46 @@
+# Generic Files
+# =================================
+
+# IDE and editor files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# Log files
+*.log
+logs/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Backend - Node.js
+# =================================
+
+# Dependency directories
+backend/node_modules/
+
+# Environment variables - IMPORTANT
+backend/.env
+
+# Build output
+backend/dist/
+backend/build/
+
+# Frontend - Flutter
+# =================================
+
+# Flutter/Dart generated files
+frontend/.dart_tool/
+frontend/.packages
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/pubspec.lock  # Optional but recommended for libraries
+
+# Build output
+frontend/build/
+
+# Other generated files
+frontend/app/
